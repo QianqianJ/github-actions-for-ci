@@ -1,0 +1,10 @@
+Team awesome's approval workflow
+on: pull_request_review
+jobs:
+  labelWhenApproved:
+    runs-on: ubuntu-latest
+uses:
+  Env:
+    APPROVALS: 1
+    GITHUB_TOKEN: ${{ github.token }}
+    ADD_LABEL: approve
